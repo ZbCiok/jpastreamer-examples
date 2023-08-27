@@ -4,8 +4,11 @@ import com.speedment.jpastreamer.application.JPAStreamer;
 import org.springframework.stereotype.Repository;
 import zjc.examples.spring.jpastreamer.dto.EmployeeDTO;
 import zjc.examples.spring.jpastreamer.dto.EmployeeWithDetailsDTO;
+import zjc.examples.spring.jpastreamer.dto.OrganizationDTO;
 import zjc.examples.spring.jpastreamer.model.Employee;
 import zjc.examples.spring.jpastreamer.model.Employee$;
+import zjc.examples.spring.jpastreamer.model.Organization;
+import zjc.examples.spring.jpastreamer.model.Organization$;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -19,6 +22,13 @@ public class EmployeeRepository {
 
     public EmployeeRepository(JPAStreamer streamer) {
         this.streamer = streamer;
+    }
+
+    public List<EmployeeDTO> findAll() {
+        return streamer.stream(Employee.class)
+                .sorted(Employee$.name)
+                .map(EmployeeDTO::new)
+                .collect(Collectors.toList());
     }
 
     public List<EmployeeDTO> findBySalaryGreaterThan(final int salary) {
