@@ -1,1 +1,0 @@
-# JPAstreamer-example-06
