@@ -32,8 +32,8 @@ public class OrganizationRepository {
         final EntityManager em = emf.createEntityManager();
         streamer.stream(EntityManagerFactory.class);
 
-        String oldName = "Org1";
-        String newName = "Org1.01";
+        String oldName = "Org1.02";
+        String newName = "Org1.03";
 
         try {
             em.getTransaction().begin();;

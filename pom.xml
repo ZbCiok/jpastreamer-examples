@@ -10,7 +10,7 @@
         <relativePath/>
     </parent>
     <groupId>zjc.examples.spring.jpastreamer</groupId>
-    <artifactId>jpastreamer-spring-boot-h2</artifactId>
+    <artifactId>jpastreamer-spring-boot-postgres</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -44,9 +44,9 @@
             <version>1.0.2</version>
         </dependency>
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.32</version>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.6.0</version>
         </dependency>
 
 

@@ -1,4 +1,4 @@
-# jpastreamer-spring-boot-h2
+# jpastreamer-spring-boot-postgres
 - java 17
 - spring boot 3.1.3
 - jpastreamer 3.0.3
