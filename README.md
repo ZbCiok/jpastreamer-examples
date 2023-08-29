@@ -1,7 +1,8 @@
-# JPAstreamer-example-06
+# jpastreamer-spring-boot-h2
 - java 17
 - spring boot 3.1.3
 - jpastreamer 3.0.3
+- hibernate 6.0.2.Final
 
 See:
 - http://localhost:8080/employees

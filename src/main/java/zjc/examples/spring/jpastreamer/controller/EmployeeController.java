@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import zjc.examples.spring.jpastreamer.dto.EmployeeDTO;
 import zjc.examples.spring.jpastreamer.dto.EmployeeWithDetailsDTO;
-import zjc.examples.spring.jpastreamer.dto.OrganizationDTO;
 import zjc.examples.spring.jpastreamer.repository.EmployeeRepository;
 
 import java.util.List;
