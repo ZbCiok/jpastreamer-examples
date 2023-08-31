@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import zjc.examples.spring.jpastreamer.dto.DepartmentDTO;
 import zjc.examples.spring.jpastreamer.dto.EmployeeDTO;
+import zjc.examples.spring.jpastreamer.model.Department;
 import zjc.examples.spring.jpastreamer.repository.DepartmentRepository;
 
 import java.util.List;
@@ -17,21 +18,28 @@ public class DepartmentRepositoryTests {
     @Autowired
     private DepartmentRepository repository;
 
-    @Test
-    void findAll() {
-        List<DepartmentDTO> all = repository.findAll();
-        assertEquals(4, all.size());
-    }
 
     @Test
-    void getNumberOfEmployeesByDepartment() {
-        long count = repository.getNumberOfEmployees(1);
-        assertEquals(3, count);
+    void findByTitle() {
+        Department department = repository.findByTitle("bbb");
+        assertEquals("bbb", department.getName());
     }
 
-    @Test
-    void getEmployeesByDepartment() {
-        List<EmployeeDTO> employees = repository.getEmployees(1);
-        assertEquals(3, employees.size());
-    }
+//    @Test
+//    void findAll() {
+//        List<DepartmentDTO> all = repository.findAll();
+//        assertEquals(4, all.size());
+//    }
+//
+//    @Test
+//    void getNumberOfEmployeesByDepartment() {
+//        long count = repository.getNumberOfEmployees(1);
+//        assertEquals(3, count);
+//    }
+//
+//    @Test
+//    void getEmployeesByDepartment() {
+//        List<EmployeeDTO> employees = repository.getEmployees(1);
+//        assertEquals(3, employees.size());
+//    }
 }

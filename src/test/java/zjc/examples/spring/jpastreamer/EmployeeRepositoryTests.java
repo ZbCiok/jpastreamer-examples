@@ -22,9 +22,9 @@ public class EmployeeRepositoryTests {
     void findByIdWithDetails() {
         EmployeeWithDetailsDTO dto = repository.findById(1);
         assertNotNull(dto);
-        assertNotNull(dto.departmentName());
-        assertNotNull(dto.organizationName());
-        assertEquals(dto.id(), 1);
+        assertNotNull(dto.getDepartmentName());
+        assertNotNull(dto.getOrganizationName());
+        assertEquals(dto.getId(), 1);
     }
 
     @Test
