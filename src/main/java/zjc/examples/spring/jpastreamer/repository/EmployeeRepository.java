@@ -24,12 +24,6 @@ import static com.speedment.jpastreamer.streamconfiguration.StreamConfiguration.
 @Repository
 public class EmployeeRepository  implements PanacheRepository<EmployeeDTO> {
 
-//    private final JPAStreamer streamer;
-//
-//    public EmployeeRepository(JPAStreamer streamer) {
-//        this.streamer = streamer;
-//    }
-
     private static final Logger LOGGER = LoggerFactory.getLogger(LogController.class);
 
     @Inject
