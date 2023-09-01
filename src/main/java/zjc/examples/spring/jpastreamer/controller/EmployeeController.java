@@ -21,14 +21,14 @@ public class EmployeeController {
     }
 
     @GetMapping
-    public List<EmployeeDTO> findAll() {
-        return repository.findAll();
+    public List<EmployeeDTO> listAll() {
+        return repository.listAll();
     }
-
-    @GetMapping("/greater-than/{salary}")
-    public List<EmployeeDTO> findBySalaryGreaterThan(@PathVariable("salary") int salary) {
-        return findBySalaryGreaterThan(salary);
-    }
+//
+//    @GetMapping("/greater-than/{salary}")
+//    public List<EmployeeDTO> findBySalaryGreaterThan(@PathVariable("salary") int salary) {
+//        return findBySalaryGreaterThan(salary);
+//    }
 
     @GetMapping("/offset/{offset}/limit/{limit}")
     public List<EmployeeDTO> findAllWithPagination(@PathVariable("offset") int offset,
@@ -36,8 +36,8 @@ public class EmployeeController {
         return repository.findAllWithPagination(offset, limit);
     }
 
-    @GetMapping("/{id}")
-    public EmployeeWithDetailsDTO findById(@PathVariable("id") Integer id) {
-        return repository.findById(id);
-    }
+//    @GetMapping("/{id}")
+//    public EmployeeWithDetailsDTO findById(@PathVariable("id") Integer id) {
+//        return repository.findById(id);
+//    }
 }

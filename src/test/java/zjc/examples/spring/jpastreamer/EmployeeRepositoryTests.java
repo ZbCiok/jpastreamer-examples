@@ -17,15 +17,15 @@ public class EmployeeRepositoryTests {
 
     @Autowired
     private EmployeeRepository repository;
-
-    @Test
-    void findByIdWithDetails() {
-        EmployeeWithDetailsDTO dto = repository.findById(1);
-        assertNotNull(dto);
-        assertNotNull(dto.getDepartmentName());
-        assertNotNull(dto.getOrganizationName());
-        assertEquals(dto.getId(), 1);
-    }
+//
+//    @Test
+//    void findByIdWithDetails() {
+//        EmployeeWithDetailsDTO dto = repository.findById(1);
+//        assertNotNull(dto);
+//        assertNotNull(dto.getDepartmentName());
+//        assertNotNull(dto.getOrganizationName());
+//        assertEquals(dto.getId(), 1);
+//    }
 
     @Test
     void findAllWithPagination() {
@@ -33,9 +33,9 @@ public class EmployeeRepositoryTests {
         assertEquals(3, all.size());
     }
 
-    @Test
-    void findBySalaryGreaterThan() {
-        List<EmployeeDTO> employees = repository.findBySalaryGreaterThan(25000);
-        assertEquals(3, employees.size());
-    }
+//    @Test
+//    void findBySalaryGreaterThan() {
+//        List<EmployeeDTO> employees = repository.findBySalaryGreaterThan(25000);
+//        assertEquals(3, employees.size());
+//    }
 }

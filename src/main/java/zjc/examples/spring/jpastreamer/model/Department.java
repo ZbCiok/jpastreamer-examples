@@ -20,4 +20,11 @@ public class Department {
     private Set<Employee> employees;
     @ManyToOne(fetch = FetchType.LAZY)
     private Organization organization;
+
+    public Department(Department department) {
+        this.id = department.getId();
+        this.name = department.getName();
+        this.employees = department.getEmployees();
+        this.organization = department.organization;
+    }
 }

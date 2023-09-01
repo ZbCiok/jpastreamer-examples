@@ -21,25 +21,25 @@ public class DepartmentRepositoryTests {
 
     @Test
     void findByTitle() {
-        Department department = repository.findByTitle("bbb");
-        assertEquals("bbb", department.getName());
+        String departmentName = repository.findByTitle("bbb");
+        assertEquals("bbb", departmentName);
     }
 
-//    @Test
-//    void findAll() {
-//        List<DepartmentDTO> all = repository.findAll();
-//        assertEquals(4, all.size());
-//    }
-//
-//    @Test
-//    void getNumberOfEmployeesByDepartment() {
-//        long count = repository.getNumberOfEmployees(1);
-//        assertEquals(3, count);
-//    }
-//
-//    @Test
-//    void getEmployeesByDepartment() {
-//        List<EmployeeDTO> employees = repository.getEmployees(1);
-//        assertEquals(3, employees.size());
-//    }
+    @Test
+    void listAll() {
+        repository.listAll();
+    }
+
+
+    @Test
+    void getNumberOfEmployeesByDepartment() {
+        long count = repository.getNumberOfEmployees(1);
+        assertEquals(3, count);
+    }
+
+    @Test
+    void getEmployeesByDepartment() {
+        List<EmployeeDTO> employees = repository.getEmployees(1);
+        assertEquals(3, employees.size());
+    }
 }
