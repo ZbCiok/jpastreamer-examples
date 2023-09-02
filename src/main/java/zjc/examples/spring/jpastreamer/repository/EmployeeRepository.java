@@ -55,7 +55,6 @@ public class EmployeeRepository  implements PanacheRepository<EmployeeDTO> {
                 .collect(Collectors.toList());
     }
 
-    // TODO
     public EmployeeWithDetailsDTO findById(final Integer id) {
         return jpaStreamer.stream(of(Employee.class)
                         .joining(Employee$.department)
