@@ -28,7 +28,6 @@ public class EmployeeRepository  implements PanacheRepository<EmployeeDTO> {
 
     @Inject
     JPAStreamer jpaStreamer;
-
     private Stream<Employee> employeeStream() { return jpaStreamer.stream(Employee.class); }
 
 
@@ -38,20 +37,14 @@ public class EmployeeRepository  implements PanacheRepository<EmployeeDTO> {
                 .map(EmployeeDTO::new)
                 .collect(Collectors.toList());
     }
-//    public List<EmployeeDTO> findAll() {
-//        return employeeStream()
-//                .sorted(Employee$.name)
-//                .map(EmployeeDTO::new)
-//                .collect(Collectors.toList());
-//    }
-//
-//    public List<EmployeeDTO> findBySalaryGreaterThan(final int salary) {
-//        return streamer.stream(Employee.class)
-//                .filter(Employee$.salary.greaterThan(salary))
-//                .sorted(Employee$.salary)
-//                .map(EmployeeDTO::new)
-//                .collect(Collectors.toList());
-//    }
+
+    public List<EmployeeDTO> findBySalaryGreaterThan(final int salary) {
+        return employeeStream()
+                .filter(Employee$.salary.greaterThan(salary))
+                .sorted(Employee$.salary)
+                .map(EmployeeDTO::new)
+                .collect(Collectors.toList());
+    }
 
     public List<EmployeeDTO> findAllWithPagination(final int offset,
                                                    final int limit) {
@@ -61,14 +54,15 @@ public class EmployeeRepository  implements PanacheRepository<EmployeeDTO> {
                 .map(EmployeeDTO::new)
                 .collect(Collectors.toList());
     }
-//
-//    public EmployeeWithDetailsDTO findById(final Integer id) {
-//        return streamer.stream(of(Employee.class)
-//                        .joining(Employee$.department)
-//                        .joining(Employee$.organization))
-//                .filter(Employee$.id.equal(id))
-//                .map(EmployeeWithDetailsDTO::new)
-//                .findFirst()
-//                .orElseThrow();
-//    }
+
+    // TODO
+    public EmployeeWithDetailsDTO findById(final Integer id) {
+        return jpaStreamer.stream(of(Employee.class)
+                        .joining(Employee$.department)
+                        .joining(Employee$.organization))
+                .filter(Employee$.id.equal(id))
+                .map(EmployeeWithDetailsDTO::new)
+                .findFirst()
+                .orElseThrow();
+    }
 }
