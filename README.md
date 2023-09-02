@@ -3,7 +3,8 @@
 - spring boot 3.1.3
 - jpastreamer 3.0.4
 - hibernate 6.2.7.Final
-- Quarkus 3.2.0.Final, PanacheRepository
+- Quarkus 3.2.0.Final / Panache
+  - https://quarkus.io/guides/hibernate-orm-panache
 
 See:
 - http://localhost:8080/employees

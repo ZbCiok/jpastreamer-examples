@@ -3,9 +3,7 @@ package zjc.examples.spring.jpastreamer;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import zjc.examples.spring.jpastreamer.dto.DepartmentDTO;
 import zjc.examples.spring.jpastreamer.dto.EmployeeDTO;
-import zjc.examples.spring.jpastreamer.model.Department;
 import zjc.examples.spring.jpastreamer.repository.DepartmentRepository;
 
 import java.util.List;

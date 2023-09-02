@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class LogController {
 
-    // creating a logger
     Logger logger = LoggerFactory.getLogger(LogController.class);
 
     @RequestMapping("/log")

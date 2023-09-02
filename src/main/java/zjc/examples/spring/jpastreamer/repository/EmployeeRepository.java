@@ -6,12 +6,9 @@ import jakarta.inject.Inject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
-import zjc.examples.spring.jpastreamer.dto.DepartmentDTO;
 import zjc.examples.spring.jpastreamer.dto.EmployeeDTO;
 import zjc.examples.spring.jpastreamer.dto.EmployeeWithDetailsDTO;
 import zjc.examples.spring.jpastreamer.log.LogController;
-import zjc.examples.spring.jpastreamer.model.Department;
-import zjc.examples.spring.jpastreamer.model.Department$;
 import zjc.examples.spring.jpastreamer.model.Employee;
 import zjc.examples.spring.jpastreamer.model.Employee$;
 

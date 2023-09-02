@@ -1,7 +1,6 @@
 package zjc.examples.spring.jpastreamer.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import zjc.examples.spring.jpastreamer.dto.OrganizationDTO;
@@ -21,6 +20,6 @@ public class OrganizationController {
 
     @GetMapping
     public List<OrganizationDTO> findAll() {
-        return repository.findAll();
+        return repository.listAll();
     }
 }
